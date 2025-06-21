@@ -42,6 +42,8 @@ body {
 
 .nav-left a{
   text-decoration: none;
+    transition: color 0.4s ease;
+
 }
 
 .nav-left a:visited {
@@ -49,10 +51,8 @@ body {
 }
 
 .nav-left a:hover {
-  color: #0077B5;
+  color: 	#FFDB00;
 }
-
-
 
 .nav-right {
   display: flex;
@@ -65,6 +65,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color 0.4s ease;
 }
 
 a, a:active
@@ -81,6 +82,17 @@ a:visited {
   color:#0077B5;
 }
 
+.youtube-link:hover{
+  color:#ff5252 !important;
+}
+
+.resume-link:hover{
+  color:#8a8a8a !important;
+}
+
+.about-link:hover{
+  color: #77DD77 !important;
+}
 
 .container {
     display: flex;
@@ -146,6 +158,35 @@ a:visited {
     background-position: center;
 }
 
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  opacity: 1;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 0.4s; /* how long the overlay stays */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 
 
