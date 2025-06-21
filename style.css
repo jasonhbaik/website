@@ -67,6 +67,11 @@ body {
   text-decoration: none;
 }
 
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
 .nav-right a:visited {
   color: white;
