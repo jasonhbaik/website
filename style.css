@@ -1,17 +1,32 @@
 * {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 body {
+    background-color: black; 
     height: 100dvh;
     min-height: 100vh;
     width: auto;
     display: flex;
     flex-direction: column;
+}
+
+canvas {
+    pointer-events: none !important;
+    background: transparent !important; /* Ensure canvas background is transparent */
+    z-index: 9999 !important; /* Set confetti z-index much higher */
+    position: fixed !important; /* Ensure it's positioned correctly */
+}
+
+canvas[data-generated="true"],
+canvas#confetti-canvas {
+    z-index: 9999 !important;
+    position: fixed !important;
+    pointer-events: none !important;
 }
 
 .navBar {
@@ -24,26 +39,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 1;
   padding: 2rem;
-  align-items: start;
+  align-items: center;
 }
 
 .nav-left {
   color: white;
-
   transition: color 0.2s ease;
-  
-  font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.15em;
-  font-weight: 300;
   text-transform: uppercase;
+  font-weight: 300;
+
 }
+
+.name{
+  cursor: pointer; 
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: color 0.4s ease;
+
+}
+
+.name:hover{
+  color:#FFDB00;
+}
+
 
 .nav-left a{
   text-decoration: none;
-    transition: color 0.4s ease;
-
+  transition: color 0.4s ease;
 }
 
 .nav-left a:visited {
@@ -63,12 +90,14 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.15em;
   font-weight: 300;
+  font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.4s ease;
 }
 
-a, a:active
+a, 
+a:active,
 a:visited {
   color: white;
   text-decoration: none;
@@ -98,10 +127,9 @@ a:visited {
     display: flex;
     flex-direction: column;
     flex-grow:1;    
-
     padding-left:30px;
     padding-right:30px;
-    padding-top: 15px;
+    padding-top: 0;
 }
 
 .pair{
@@ -110,7 +138,6 @@ a:visited {
     gap: 30px;
     width: 100%;
     margin-bottom: 30px;
-
 }
 
 .project {
@@ -121,11 +148,9 @@ a:visited {
   cursor:pointer;
 }
 
-
 .project:hover .overlay {
   opacity: 1;
 }
-
 
 .description {
   font-size: 3rem;
@@ -150,7 +175,6 @@ a:visited {
   padding: 1rem;
 }
 
-
 .project-bg{
     width:100%;
     height: 100%;
@@ -169,13 +193,13 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 100;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 4rem;
   letter-spacing: 0.15em;
   opacity: 1;
   animation: fadeOut 1s ease forwards;
-  animation-delay: 0.4s; /* how long the overlay stays */
+  animation-delay: 0.2s; /* how long the overlay stays */
 }
 
 @keyframes fadeOut {
@@ -188,31 +212,61 @@ a:visited {
   }
 }
 
-
-
-
 .project[data-id="p1"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/chase-toy.png")
 }
-
 .project[data-id="p2"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/lidar.png")
 }
-
 .project[data-id="p3"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/chair-vision.png")
 }
-
 .project[data-id="p4"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/bustime.png")
 }
-
 .project[data-id="p5"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/mechanism.png")
 }
-
 .project[data-id="p6"] .project-bg{
-    background-image:url("./images/DSC06747.jpg")
+    background-image:url("./images/course-work.png")
 }
 
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Stack nav items vertically */
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-left h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Make projects stack instead of side-by-side */
+  .pair {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

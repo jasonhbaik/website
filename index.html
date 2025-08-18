@@ -10,79 +10,143 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+  <style>
+    canvas {
+      pointer-events: none !important;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="intro-overlay">
+  <div id="intro-overlay"></div>
+  <div class="navBar">
+      <div class="nav-left">
+      <h1 class="name">Jason Baik</h1>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+        <script>
+      const name = document.querySelector(".name");
+
+      name.addEventListener("click", (e) => {         
+      confetti({
+        spread: 360,
+        ticks: 100,
+        gravity: 1,
+        decay: 0.94,
+        startVelocity: 30,
+        particleCount: 70,
+        scalar: 3,
+        shapes: ["image"],
+        shapeOptions: {
+          image: [
+            {  
+            src: "./images/banquet.png",
+              width: 50,
+              height: 50,
+            },
+                        {  
+            src: "./images/isthis.png",
+              width: 50,
+              height: 50,
+            },
+                        {  
+            src: "./images/dayone.png",
+              width: 50,
+              height: 50,
+            },
+            {  
+            src: "./images/vcc.png",
+              width: 50,
+              height: 50,
+            },
+            {  
+            src: "./images/dandan.png",
+              width: 50,
+              height: 50,
+            },
+            {  
+            src: "./images/josh.png",
+              width: 50,
+              height: 50,
+            },
+            {
+            src: "./images/electrical-couch.png",
+              width: 50,
+              height: 50,
+            },
+            {
+            src: "./images/jjj.png",
+              width: 50,
+              height: 50,
+            },
+            
+          ],
+          
+        },
+      });
+      });
+
+
+  </script>
+
     </div>
-    <div class="navBar">
-        <div class="nav-left">
-            <a>Jason Baik</a>
-        </div>
-            <div class="nav-right">
-                <a class="linkedin-link" href="https://www.linkedin.com/in/hansol-baik/" target="_blank">LinkedIn</a>
-                <a class="youtube-link" href="https://www.youtube.com/@hansolbaik" target="_blank">YouTube</a>
-                <a class="resume-link" href="Jason_Baik_Resume_Summer_2025.pdf" target="_blank">Resume</a>
-                <a class ="about-link" href="about.html">About</a>
-            </div>
+    <div class="nav-right">
+      <a class="linkedin-link" href="https://www.linkedin.com/in/hansol-baik/" target="_blank">LinkedIn</a>
+      <a class="youtube-link" href="https://www.youtube.com/@hansolbaik" target="_blank">YouTube</a>
+      <a class="resume-link" href="Jason_Baik_Resume_Summer_2025.pdf" target="_blank">Resume</a>
+      <a class="about-link" href="./about/index.html">About</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="pair">
+      <div data-id="p1" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/dog-chase-toy/index.html" class="overlay">
+          <div class="description">Dog Chase Toy</div>
+        </a>
+      </div>
+
+      <div data-id="p2" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/lidar-mapping-system/index.html" class="overlay">
+          <div class="description">LiDAR Mapping System</div>
+        </a>
+      </div>
     </div>
 
-    <div class="container">
+    <div class="pair">
+      <div data-id="p3" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/rear-view-camera/index.html" class="overlay">
+          <div class="description">Rear-View Camera</div>
+        </a>
+      </div>
 
-        <div class="pair">
-            <div data-id="p1" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-
-            <div data-id="p2" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-        </div>
-
-        <div class="pair">
-            <div data-id="p3" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-
-            <div data-id="p4" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-        </div>
-
-
-
-            <div class="pair">
-            <div data-id="p5" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-
-            <div data-id="p6" class="project">
-                <div class="project-bg"></div>
-                <a href ="./chair-vision/index.html" class="overlay">
-                <div class="description">Chair-Vision</div>
-                </a>
-            </div>
-        </div>
-
-
-
+      <div data-id="p4" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/bus-time-display/index.html" class="overlay">
+          <div class="description">Bus Time Display</div>
+        </a>
+      </div>
     </div>
 
-   
+    <div class="pair">
+      <div data-id="p5" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/recycling-robot/index.html" class="overlay">
+          <div class="description">Recycling Robot</div>
+        </a>
+      </div>
+
+      <div data-id="p6" class="project">
+        <div class="project-bg"></div>
+        <a href="./projects/course-work/index.html" class="overlay">
+          <div class="description">Course Work</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
