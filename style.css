@@ -42,6 +42,8 @@ canvas#confetti-canvas {
   z-index: 1;
   padding: 2rem;
   align-items: center;
+  position:fixed;
+  font-weight:500;
 }
 
 .nav-left {
@@ -49,18 +51,14 @@ canvas#confetti-canvas {
   transition: color 0.2s ease;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-weight: 300;
-
 }
 
 .name{
   cursor: pointer; 
   background: transparent;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   font-size: 1rem;
   transition: color 0.4s ease;
-
 }
 
 .name:hover{
@@ -84,12 +82,12 @@ canvas#confetti-canvas {
 .nav-right {
   display: flex;
   gap: 2rem;
+  font-weight:500;
 }
 
 .nav-right a {
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.15em;
-  font-weight: 300;
   font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -228,7 +226,7 @@ a:visited {
     background-image:url("./images/mechanism.png")
 }
 .project[data-id="p6"] .project-bg{
-    background-image:url("./images/course-work.png")
+    background-image:url("./images/simulation.png")
 }
 
 

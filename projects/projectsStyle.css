@@ -1,0 +1,326 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+h1{
+}
+
+h2{
+    font-family:'Nunito', sans-serif;
+    text-transform: none;
+    font-weight:400;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align:left;
+}
+
+h3{
+    font-family:'Nunito', sans-serif;
+    text-transform: none;
+    font-weight:400;
+    color: gray;
+    letter-spacing: 0.1em;
+    text-align:left;
+}
+
+body {
+    background-color: black; 
+    height: auto;
+    min-height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+hr{
+    color:gray;
+    background-color: gray;
+    height:2px;
+    width: 100%;
+    border:none;
+}
+
+.navBar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 2rem;
+  align-items: center;
+  position:fixed;
+}
+
+.nav-left {
+  transition: color 0.2s ease;
+}
+
+.name{
+  background: transparent;
+  transition: color 0.4s ease;
+}
+
+.banner img{
+    width: 100%;
+    margin-top:60px;
+    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.banner iframe{
+    width: 100%;
+    margin-top:60px;
+    height: calc(100vh - 60px);
+    border: none;
+}
+
+
+.name:hover{
+  color:#FFDB00;
+}
+
+
+.nav-left a{
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.nav-left a:visited {
+  color: white;
+}
+
+.nav-left a:hover {
+  color: 	#FFDB00;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right a {
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+a, 
+a:active,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-right a:visited {
+  color: white;
+}
+
+.nav-right a:hover {
+  color:#0077B5;
+}
+
+.youtube-link:hover{
+  color:#ff5252 !important;
+}
+
+.resume-link:hover{
+  color:#8a8a8a !important;
+}
+
+.about-link:hover{
+  color: #77DD77 !important;
+}
+
+.container {
+    display:flex;
+    flex:1;
+    min-height:200vh;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.about-container{ 
+    display:flex;
+    flex:1;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    height: auto;
+    padding-bottom: 60px;
+
+}
+
+.course{
+    display:inline-flex;
+    align-items: flex-start;
+    flex:1;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    width:auto;
+    height: auto;
+}
+
+.left{
+    flex:1;
+    position: sticky;
+    max-height:30%;
+    height:fit-content;
+
+    top:60px;
+    padding-top: 50px;
+    padding-left: 2rem;
+
+
+    }
+
+
+
+.right{
+    flex:2;
+    
+    padding:2rem;
+    padding-top: 50px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap:50px;
+    padding-bottom:0;
+
+    
+
+
+    
+}
+
+.text-media img{
+    width: 100%;
+    height: auto
+}
+
+.video-box{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.video-media video{
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  opacity: 1;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 0.2s; /* how long the overlay stays */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.banner[data-id="p1"] .project-bg{
+    background-image:url("./images/chase-toy.png")
+}
+.banner[data-id="p2"] .project-bg{
+    background-image:url("../images/lidar.png")
+}
+.banner[data-id="p3"] .project-bg{
+    background-image:url("../images/chair-vision.png")
+}
+.banner[data-id="p4"] .project-bg{
+    background-image:url("./images/bustime.png")
+}
+.banner[data-id="p5"] .project-bg{
+    background-image:url("./images/mechanism.png")
+}
+.banner[data-id="p6"] .project-bg{
+    background-image:url("./images/course-work.png")
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Stack nav items vertically */
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-left h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Make projects stack instead of side-by-side */
+  .pair {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
