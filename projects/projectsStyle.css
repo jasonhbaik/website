@@ -189,33 +189,22 @@ a:visited {
     position: sticky;
     max-height:30%;
     height:fit-content;
-
     top:60px;
     padding-top: 50px;
     padding-left: 2rem;
-
-
     }
 
 
 
 .right{
     flex:2;
-    
     padding:2rem;
     padding-top: 50px;
-    
-
     display: flex;
     flex-direction: column;
     align-items: left;
     gap:50px;
     padding-bottom:0;
-
-    
-
-
-    
 }
 
 .text-media img{
@@ -253,7 +242,7 @@ a:visited {
   letter-spacing: 0.15em;
   opacity: 1;
   animation: fadeOut 1s ease forwards;
-  animation-delay: 0.2s; /* how long the overlay stays */
+  animation-delay: 0.2s;
 }
 
 @keyframes fadeOut {
@@ -266,61 +255,126 @@ a:visited {
   }
 }
 
-.banner[data-id="p1"] .project-bg{
-    background-image:url("./images/chase-toy.png")
-}
-.banner[data-id="p2"] .project-bg{
-    background-image:url("../images/lidar.png")
-}
-.banner[data-id="p3"] .project-bg{
-    background-image:url("../images/chair-vision.png")
-}
-.banner[data-id="p4"] .project-bg{
-    background-image:url("./images/bustime.png")
-}
-.banner[data-id="p5"] .project-bg{
-    background-image:url("./images/mechanism.png")
-}
-.banner[data-id="p6"] .project-bg{
-    background-image:url("./images/course-work.png")
-}
-
-
-/* Mobile Styles */
 @media (max-width: 768px) {
-  /* Stack nav items vertically */
+
+  .name{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+
+  }
   .navBar {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-left h1 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
   }
 
   .nav-right {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row; 
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; 
   }
 
-  /* Make projects stack instead of side-by-side */
-  .pair {
-    flex-direction: column;
+  .nav-right a{
+    padding-top:1rem;
+    font-size: 0.8rem;
   }
 
-  .project {
+  .banner {
+    text-align: left;
+  }
+  
+  .banner img {
     width: 100%;
-    margin-bottom: 15px;
+    margin-top: 60px;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    margin-left: 0 !important;
+    margin-right: auto;
   }
-
-  .description {
-    font-size: 1rem;
-  }
-
+  
   .container {
-    padding: 10px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    min-height:auto;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .about-container{ 
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .course{
+    display:inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex:1;
+    padding:0;
+    margin:0;
+    padding-left:0;
+    gap:0;
+    width:auto;
+    height: auto;
+  }
+
+  .left{
+    flex:1;
+    max-height:30%;
+    height:fit-content;
+    top:60px;
+    padding-top: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position:static;
+    width:100%;
+  }
+
+  .right{
+    flex:2;
+    padding:2rem;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap:50px;
+    padding-bottom:0;
   }
 }

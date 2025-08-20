@@ -19,74 +19,68 @@
 
 <body>
   <div id="intro-overlay"></div>
-  <div class="navBar">
+    <div class="navBar">
       <div class="nav-left">
-      <h1 class="name">Jason Baik</h1>
-        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-        <script>
-      const name = document.querySelector(".name");
-
-      name.addEventListener("click", (e) => {         
-      confetti({
-        spread: 360,
-        ticks: 100,
-        gravity: 1,
-        decay: 0.94,
-        startVelocity: 30,
-        particleCount: 70,
-        scalar: 3,
-        shapes: ["image"],
-        shapeOptions: {
-          image: [
-            {  
-            src: "./images/banquet.png",
-              width: 50,
-              height: 50,
-            },
-                        {  
-            src: "./images/isthis.png",
-              width: 50,
-              height: 50,
-            },
-                        {  
-            src: "./images/dayone.png",
-              width: 50,
-              height: 50,
-            },
-            {  
-            src: "./images/vcc.png",
-              width: 50,
-              height: 50,
-            },
-            {  
-            src: "./images/dandan.png",
-              width: 50,
-              height: 50,
-            },
-            {  
-            src: "./images/josh.png",
-              width: 50,
-              height: 50,
-            },
-            {
-            src: "./images/electrical-couch.png",
-              width: 50,
-              height: 50,
-            },
-            {
-            src: "./images/jjj.png",
-              width: 50,
-              height: 50,
-            },
-            
-          ],
-          
-        },
-      });
-      });
-
-
-  </script>
+        <h1 class="name">Jason Baik</h1>
+          <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+          <script>
+            const name = document.querySelector(".name");
+            name.addEventListener("click", (e) => {         
+            confetti({
+              spread: 360,
+              ticks: 100,
+              gravity: 1,
+              decay: 0.94,
+              startVelocity: 30,
+              particleCount: 70,
+              scalar: 3,
+              shapes: ["image"],
+              shapeOptions: {
+                image: [
+                  {  
+                  src: "./images/banquet.png",
+                    width: 50,
+                    height: 50,
+                  },
+                              {  
+                  src: "./images/isthis.png",
+                    width: 50,
+                    height: 50,
+                  },
+                              {  
+                  src: "./images/dayone.png",
+                    width: 50,
+                    height: 50,
+                  },
+                  {  
+                  src: "./images/vcc.png",
+                    width: 50,
+                    height: 50,
+                  },
+                  {  
+                  src: "./images/dandan.png",
+                    width: 50,
+                    height: 50,
+                  },
+                  {  
+                  src: "./images/josh.png",
+                    width: 50,
+                    height: 50,
+                  },
+                  {
+                  src: "./images/electrical-couch.png",
+                    width: 50,
+                    height: 50,
+                  },
+                  {
+                  src: "./images/jjj.png",
+                    width: 50,
+                    height: 50,
+                  },
+                ],
+              },
+            });
+            });</script>
 
     </div>
     <div class="nav-right">
@@ -102,7 +96,7 @@
     <div class="pair">
       <div data-id="p1" class="project">
         <div class="project-bg"></div>
-        <a href="/projects/dog-chase-toy/" class="overlay">
+          <a href="/projects/dog-chase-toy/" class="overlay">
           <div class="description">Dog Chase Toy</div>
         </a>
       </div>
