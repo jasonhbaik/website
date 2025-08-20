@@ -276,24 +276,10 @@ a:visited {
     max-height:40vh;
   }
 
-  .project:hover .overlay{
-    opacity:0;
-  }
-
-  .project .overlay {
-    background: transparent !important; 
-    opacity: 1 !important; 
-    justify-content: center;
-    align-items: flex-end;
-    padding:0;
-  }
 
   .description {
-    font-size: 1.5rem; 
-    background-color: black !important; 
-    padding: 0.1rem;
-    padding-left:0.5rem;
-    padding-right:0.5rem;
+    font-size: 2rem; 
+
   }
 
   .container {
